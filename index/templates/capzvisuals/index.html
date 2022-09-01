@@ -1,0 +1,110 @@
+
+{% load static %}
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="{% static 'capzvisuals/css/index.css' %}">
+<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+			integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+
+    <div class="navbar">
+			<div class="container nav-container">
+				<div class="nav flex">
+					<a href="/" class="logo">
+						<img
+							src="static\capzvisuals\image\web_images\CAPZVISUALS WHITE.png"
+							alt="Capz Visuals"
+							class="img"
+						/>
+					</a>
+					<ul>
+						<li><a href="/" class="nav-home">Home</a></li>
+          <li><a href="{% url 'services' %}" class="nav-services">Services</a></li>
+						<li><a href="{% url 'about' %}" class="nav-about">About</a></li>
+						<li><a href="{% url 'contact' %}" class="nav-contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+<header>
+  <div class="backdrop">
+    <div class="container landing">
+      <div class="hero-text">
+        <h2>Capz Visuals</h2>
+        <h1>Take Your Photographs To The Next Level</h1>
+        <p>
+          High Definition Photographs and <br />
+          Advanced Editing
+        </p>
+        <div class="btns">
+          <a href="{% url 'contact' %}" class="primary-btn btn"
+            ><i class="fa-solid fa-camera cam btn-solid"></i>Book Us Now</a
+          >
+          <a href="{% url 'services' %}" class="secondary-btn btn"
+            ><i class="fa-solid fa-image gall btn-solid"></i></i>Gallery</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="showcase">
+  <!-- <hr class="hr-2" /> -->
+  <div class="container">
+    <div class="images-preview">
+      <div class="image-grid">
+        <div class="image-1 images"></div>
+        <div class="image-2 images">
+          <img class="line" src="static\capzvisuals\image\web_images\line-direction.png" alt="" />
+        </div>
+        <div class="image-3 images"></div>
+      </div>
+
+      <div class="preview-caption">
+        <h1>Get High Defintion PhotoGraphs</h1>
+        <p>Professional Photography</p>
+        <div>
+          <a href="{% url 'contact' %}" class="primary-btn btn"
+            ><i class="fa-solid fa-camera cam-solid"></i></i>Get Yours Now </a
+          >
+        </div>
+      </div>
+    </div>
+
+</section>
+
+<div class="section">
+
+
+<div class=" comment-form">
+  <i class="fa-solid fa-message btn-solid"></i>
+  <a href="{% url 'testimony' %}" class="comments-link"><i class="fa-solid fa-message-pen"></i>write a comment on <span class="capz-span">Capz</span> Photography</a>
+  {% csrf_token %}
+  {{ form }}
+  {% for comment in comments %}
+  <div class="comment-info">
+    <small class="small">{{comment.name}}</small>
+    <p class="comment-message">{{comment.message}}</p>
+  </div>
+  {% endfor %}
+</div>
+</div>
+
+
+
+
+<footer>
+  <img src="static\capzvisuals\image\web_images\CAPZVISUALS WHITE.png" alt="Capz Visuals" class="img" />
+  <h3>Capz-visuals</h3>
+  <p>copyright 2022 @capzvisuals</p>
+</footer>
+
+
+

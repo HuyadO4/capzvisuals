@@ -1,0 +1,82 @@
+{% load static %}
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+			integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+<link rel="stylesheet" href="{% static '\capzvisuals\css\ctct.css' %}">
+<link rel="stylesheet" href="{% static '\capzvisuals\css\index.css' %}">
+<div class="navbar">
+    <div class="container nav-container">
+        <div class="nav flex">
+            <a href="/" class="logo">
+                <img
+                    src="static\capzvisuals\image\web_images\CAPZVISUALS WHITE.png"
+                    alt="Capz Visuals"
+                    class="img"
+                />
+            </a>
+            <ul>
+                <li><a href="/" class="nav-home">Home</a></li>
+  <li><a href="{% url 'services' %}" class="nav-services">Services</a></li>
+                <li><a href="{% url 'about' %}" class="nav-about">About</a></li>
+                <li><a href="{% url 'contact' %}" class="nav-contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<section class="form-section">
+    <div class="container img-plc backdrop">
+        <h2>Capz Visuals</h2>
+        <form action="mailto:mosesjoel259@gmail.com" method="post" class="form-controll" enctype="text/plain">
+            <label for="name">Name <br /></label>
+            <input type="text" id="name" class="form-item-size" />
+
+            <label for="message"
+                >Your message
+                <br />
+            </label>
+            <textarea name="text" id="message" cols="40" rows="10" class="form-item-size"></textarea>
+            <label for="email"
+                >Email
+                <br />
+            </label>
+            <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-item-size"
+                placeholder="myemail@gmail.com"
+            />
+
+            <label for="phone-number">Phone Number <br /></label>
+            <input
+                type="number"
+                id="phone-number"
+                class="form-item-size"
+                placeholder="+234"
+                name="phone number"
+                value="+234"
+            />
+            <button type="submit" action >Submit</button>
+        </form>
+
+        <section class="phone container">
+            <h3>Phone #Capzvisuals</h3>
+            <p>+23408105536869</p>
+        </section> 
+    </div>
+
+    
+</section>
+    <footer>
+    <img src="static\capzvisuals\image\web_images\CAPZVISUALS WHITE.png" alt="Capz Visuals" class="img" />
+    <h3>Capz-visuals</h3>
+    <p>copyright 2022 @capzvisuals</p>
+</footer>
+</html>

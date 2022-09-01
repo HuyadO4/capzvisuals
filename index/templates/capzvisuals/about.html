@@ -1,0 +1,102 @@
+{% load static %}
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+	integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+	crossorigin="anonymous"
+	referrerpolicy="no-referrer"
+/>
+<link rel="stylesheet" href="{% static '\capzvisuals\css\index.css' %}" />
+<link rel="stylesheet" href="{% static '\capzvisuals\css\abt.css' %}" />
+
+<div class="navbar">
+	<div class="container nav-container">
+		<div class="nav flex">
+			<a href="/" class="logo">
+				<img
+					src="static\capzvisuals\image\web_images\CAPZVISUALS WHITE.png"
+					alt="Capz Visuals"
+					class="img"
+				/>
+			</a>
+			<ul>
+				<li><a href="/" class="nav-home">Home</a></li>
+				<li>
+					<a href="{% url 'services' %}" class="nav-services">Services</a>
+				</li>
+				<li><a href="{% url 'about' %}" class="nav-about">About</a></li>
+				<li><a href="{% url 'contact' %}" class="nav-contact">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<section class="aboutsection">
+	<div class="conatiner">
+		<div class="about-grid">
+			<div class="imageframe">
+				<div class="bcapz">
+					<img src="/static/capzvisuals/image/web_images/BoyCapz2.jpg" alt="" />
+				</div>
+				<div class="img-cp">
+					<h3>Alpha Samson</h3>
+					<h4>#Boicapz</h4>
+				</div>
+			</div>
+			<div class="about-caption">
+				<h1>About Me</h1>
+				<p>
+					ART is the beauty I behold. One that elevates my spirit and gives me
+					reasons to put to birth a perfect picture for humans to consume and be
+					happy. <br />
+					Not only does pictures tell a perfect story, it gives a fundamental
+					indepth reason why we, humans should appreciate ourselves every day
+					the clock ticks. <br />
+
+					My JOb is to beautify my clients spirit with a true picture of what
+					they desire to see. My hardwork over the years has and still is a
+					smooth journey above the hurdles I face daily; tho been able to cross
+					them as I should as they are only but part of my journey to being a
+					great, creative and amazing photographer. <br />
+
+					Within this journey, I have come across different clients with
+					behavioral slams on and attitudes, but this right here is the beauty.
+					<br />
+					Some clients are professional enough to give my job an ease; that's
+					the fever cure already. <br />
+
+					I have captured great moments from weddings, birthdays, travels,
+					events, bridal showers and private 'I do' moments. <br />
+
+					There's a CAP as tag to my name. This is the beauty to why many
+					clients are keen on knowing where the inspiration come from.
+					<br />
+					It would have been a story for another day, but I am a CAP addict.
+					<br />
+					Without a CAP on while working, I look faded. Lol.... <br />
+
+					I am here to learn, unlearn and break barriers through photography.
+					<br />
+					Let's get on this journey together. <br />
+
+					Our Job is to document your memories. <br />
+
+					Let's show the world how beautiful and amazing you look through our
+					lens. <br />
+
+					Book us today. <br />
+				</p>
+				<h4><i>#Capzvisuals</i></h4>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer>
+	<img src="static\capzvisuals\image\web_images\CAPZVISUALS WHITE.png"Capz
+	Visuals" class="img" />
+	<h3>Capz-visuals</h3>
+	<p>copyright 2022 @capzvisuals</p>
+</footer>

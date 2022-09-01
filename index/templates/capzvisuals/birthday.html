@@ -1,0 +1,14 @@
+{% include 'capzvisuals/navbar.html' %}
+
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static 'capzvisuals/css/birthday.css' %}">
+
+<p><img class="size" src="{% static 'capzvisuals/image/birthday/1.jpg' %}" alt=""></p>
+<p><img class="size" src="{% static 'capzvisuals/image/birthday/2.jpg' %}" alt=""></p>
+<p><img class="size" src="{% static 'capzvisuals/image/birthday/3.jpg' %}" alt=""></p>
+<p><img class="size" src="{% static 'capzvisuals/image/birthday/4.jpg' %}" alt=""></p>
+{% for pics in birth %}
+    <img src="{{pics.image.url}}" alt="" height="50", width="50">
+{% endfor %}

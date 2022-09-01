@@ -1,0 +1,15 @@
+{% include 'capzvisuals/navbar.html' %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'capzvisuals/css/wedding.css' %}">
+
+
+<p><img class="size" src="{% static 'capzvisuals/image/weddings/1.jpg' %}" alt=""></p>
+<p><img class="size" src="{% static 'capzvisuals/image/weddings/2.jpg' %}" alt=""></p>
+<p><img class="size" src="{% static 'capzvisuals/image/weddings/3.jpg' %}" alt=""></p>
+<p><img class="size" src="{% static 'capzvisuals/image/weddings/4.jpg' %}" alt=""></p>
+<p><img class="size" src="{% static 'capzvisuals/image/weddings/5.jpg' %}" alt=""></p>
+{% for pics in wed %}
+    <img src="{{pics.image.url}}">
+{% endfor %}

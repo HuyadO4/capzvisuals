@@ -1,0 +1,41 @@
+{% include 'capzvisuals/navbar.html' %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'capzvisuals/css/subadmin.css' %}">
+
+<form action="wedding" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ wed }}
+
+    <input type="submit">
+</form>
+
+<form action="beautiful" method="post" enctype="multipart/form-data">
+{% csrf_token %}
+{{ fine }}
+
+<input type="submit">
+
+
+</form>
+<form action="fashion" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ fash }}
+
+    <input type="submit">
+</form>
+
+<form action="event" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ vent }}
+
+    <input type="submit">
+</form>
+
+<form action="birthday" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ birth }}
+
+    <input type="submit">
+</form>

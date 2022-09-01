@@ -1,0 +1,108 @@
+{% load static %}
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+			integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+<link rel="stylesheet" href="{% static 'capzvisuals\css\services.css' %}">
+<link rel="stylesheet" href="{% static 'capzvisuals\css\index.css' %}">
+<div class="navbar">
+  <div class="container nav-container">
+    <div class="nav flex">
+      <a href="/" class="logo">
+        <img
+          src="static\capzvisuals\image\web_images\CAPZVISUALS WHITE.png"
+          alt="Capz Visuals"
+          class="img"
+        />
+      </a>
+      <ul>
+        <li><a href="/" class="nav-home">Home</a></li>
+      <li><a href="{% url 'services' %}" class="nav-services">Services</a></li>
+        <li><a href="{% url 'about' %}" class="nav-about">About</a></li>
+        <li><a href="{% url 'contact' %}" class="nav-contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<section class="service-section">
+  <div class="container">
+    <div class="section-name"><h1>BEAUTY</h1></div>
+    <div class="grid-container">
+      {% for i in pretty %}
+      <div class="even">
+        <a href="{{i.image.url}}">  <img class="img-size" src="{{i.image.url}}" ></a>
+      </div> 
+      {% endfor %}
+      <!-- <div class="even">b</div> -->
+      <!-- <div class="even">c</div>
+      <div class="even">d</div>
+      <div class="even">e</div> -->
+    </div>
+  </div>
+</section>
+<section class="service-section">
+  <div class="container">
+    <div class="section-name"><h1>FASHION</h1></div>
+    <div class="grid-container">
+      {% for i in fash %}
+      <div class="even">
+        <a href="{{i.image.url}}">  <img class="img-size" src="{{i.image.url}}" ></a>
+      </div>
+  
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<section class="service-section">
+  <div class="container">
+    <div class="section-name"><h1>EVENTS</h1></div>
+    <div class="grid-container">
+      {% for i in vent %}
+      <div class="even">
+        <a href="{{i.image.url}}">  <img class="img-size" src="{{i.image.url}}" ></a>
+      </div>
+  
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<section class="service-section">
+  <div class="container">
+    <div class="section-name"><h1>WEDDINGS</h1></div>
+    <div class="grid-container">
+      {% for i in wed %}
+        <div class="even">
+          <a href="{{i.image.url}}">  <img class="img-size" src="{{i.image.url}}" ></a>
+        </div>
+    
+      {% endfor %}
+  </div>
+    </div>
+  </div>
+</section>
+<section class="service-section">
+  <div class="container">
+    <div class="section-name"><h1>BIRTHDAYS</h1></div>
+    <div class="grid-container">
+      {% for i in birth %}
+        <div class="even">
+          <a href="{{i.image.url}}">  <img class="img-size" src="{{i.image.url}}" ></a>
+        </div>
+      {% endfor %}
+    </div>
+</section>
+
+
+
+<footer>
+  <img src="static\capzvisuals\image\web_images\CAPZVISUALS WHITE.png" alt="Capz Visuals" class="img" />
+  <h3>Capz-visuals</h3>
+  <p>copyright 2022 @capzvisuals</p>
+</footer>
+</body>

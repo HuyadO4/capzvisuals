@@ -1,0 +1,18 @@
+{% include 'capzvisuals/navbar.html' %}
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'capzvisuals/css/beauty.css' %}">
+
+<p><img class="size" src="{% static 'capzvisuals/image/beauty/1.jpg' %}" alt=""></p>
+<p><img class="size" src="{% static 'capzvisuals/image/beauty/2.jpg' %}" alt=""></p>
+<p><img class="size" src="{% static 'capzvisuals/image/beauty/3.jpg' %}" alt=""></p>
+<p><img class="size" src="{% static 'capzvisuals/image/beauty/4.jpg' %}" alt=""></p>
+<p><img class="size" src="{% static 'capzvisuals/image/beauty/5.jpg' %}" alt=""></p>
+<p><img class="size" src="{% static 'capzvisuals/image/beauty/6.jpg' %}" alt=""></p>
+<p><img class="size" src="{% static 'capzvisuals/image/beauty/7.jpg' %}" alt=""></p>
+<div class="pics">
+  {% for i in pretty %}
+    <img src="{{i.image.url}}">
+  {% endfor %}
+</div>

@@ -1,0 +1,39 @@
+
+{% load static %}
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="{% static 'capzvisuals/css/index.css' %}">
+<link rel="stylesheet" href="{% static 'capzvisuals/css/ctct.css' %}">
+
+<div class="navbar">
+  <div class="container nav-container">
+      <div class="nav flex">
+          <a href="/" class="logo">
+              <img
+                  src="static\capzvisuals\image\web_images\CAPZVISUALS WHITE.png"
+                  alt="Capz Visuals"
+                  class="img"
+              />
+          </a>
+          <ul>
+              <li><a href="/" class="nav-home">Home</a></li>
+<li><a href="{% url 'services' %}" class="nav-services">Services</a></li>
+              <li><a href="{% url 'about' %}" class="nav-about">About</a></li>
+              <li><a href="{% url 'contact' %}" class="nav-contact">Contact</a></li>
+          </ul>
+      </div>
+  </div>
+</div>
+
+<div class="form-section">
+  <form class="form-controll" action="" method="post">
+    {% csrf_token %}
+
+    <div>
+      {{ comments }}
+    </div>
+    <button type="submit" value="submit">Submit</button>
+
+  </form>
+</div>
