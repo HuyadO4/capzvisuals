@@ -69,3 +69,10 @@ div{
   background-color: black;
   color: white;
 }
+
+
+.form-section{
+	margin-top: 300px;
+	display: flex;
+	gap: 30px;
+}

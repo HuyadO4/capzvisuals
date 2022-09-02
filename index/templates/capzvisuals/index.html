@@ -80,12 +80,12 @@
 
 </section>
 
-<div class="section">
+<div class="omment-section">
 
-
+  <!-- <span class="capz-span">Capz</span> Photography -->
 <div class=" comment-form">
   <i class="fa-solid fa-message btn-solid"></i>
-  <a href="{% url 'testimony' %}" class="comments-link"><i class="fa-solid fa-message-pen"></i>write a comment on <span class="capz-span">Capz</span> Photography</a>
+  <a href="{% url 'testimony' %}" class="comments-link"><i class="fa-solid fa-message-pen"></i>write a comment </a>
   {% csrf_token %}
   {{ form }}
   {% for comment in comments %}
